@@ -1,38 +1,176 @@
-.App {
+/*
+* @author: Ian Goldstein
+  @To Do List
+    - Define Grid or Flexbox
+    - Style Elements
+    - Add Effects such as Hover
+*/
+
+
+body {
+  background-color: rgb(214, 248, 221);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 3rem auto;
+  max-width: 980px;
+}
+
+a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 2px 2px white;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0;
+  text-shadow: 2px 2px white;
+}
+
+nav {
+  font-size: 1em;
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.logo {
+  grid-column: span 2;
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+}
+
+.nav-links {
+  grid-column: span 6;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  line-height: 20px;
+}
+
+
+nav ul {
+  list-style: none;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav li {
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav li:hover {
+  background-color: rgb(15, 139, 95);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+nav li:hover a {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+section {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+article {
+  flex: 1;
+  padding: 20px;
+  margin: 10px;
+  background-color: rgb(186, 225, 195);
+  border-radius: 10px;
+  background-size: cover;
 }
+
+.hero {
+
+
+}
+
+.reservations {
+  background-image: url('./assets/backgrounds/reservation.jpg');
+}
+
+.visit {
+  background-image: url('./assets/backgrounds/rome2.jpg');
+}
+
+.menu {
+  color: white;
+}
+
+.menu h2 {
+  text-shadow: 2px 2px black;
+}
+
+
+
+/* Animations */
+.grow {
+  transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.1);
+}
+
+/** New Styles for Capstone **/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.main-space {
+  grid-column: span 8;
+}
+
+.side-space {
+  grid-column: span 2;
+}
+
+/** Footer **/
+
+footer {
+  margin-top: 10px;
+  display: flex;
+}
+
+footer>div {
+  flex: 1;
+}
+
+footer .copyright {
+  text-align: right;
+  margin: 80px, 0;
+}
+
+footer .logo {
+  margin-top: 20px;
+  margin-left: 5px;
+  max-height: 150px;
+  width: auto;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  line-height: 120%;
+}
+
+footer li, footer li a {
+  color: black;
+}
+

@@ -9,10 +9,10 @@ import Nav from './components/nav';
 function App() {
   return (
     <React.Fragment>
-      <Header />
-      <Nav />
-      <Main />
-      <Footer />
+          <Header />
+          <Nav />
+          <Main />
+          <Footer />
     </React.Fragment>
   );
 }
