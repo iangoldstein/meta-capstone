@@ -4,7 +4,7 @@ import React from 'react';
 const Nav = () => {
     return (
         <nav className='nav-grid'>
-            <img className="logo" src="assets/logos/logo.png" alt="Logo" />
+            <a className="logo" href="/"><img src="assets/logos/logo.png" alt="Logo" /></a>
             <ul className='nav-links'>
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>

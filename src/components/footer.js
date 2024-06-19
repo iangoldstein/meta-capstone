@@ -30,13 +30,13 @@ const Footer = () => {
                 <h5>Social Media</h5>
                 <ul>
                     <li>
-                        <a href="/"><img src="assets/icons/facebook.png" alt="Facebook" /></a>
+                        <a href="/">Facebook</a>
                     </li>
                     <li>
-                        <a href="/"><img src="assets/icons/twitter.png" alt="Twitter" /></a>
+                        <a href="/">Twitter</a>
                     </li>
                     <li>
-                        <a href="/"><img src="assets/icons/instagram.png" alt="Instagram" /></a>
+                        <a href="/">Instagram</a>
                     </li>
                 </ul>
             </div>
