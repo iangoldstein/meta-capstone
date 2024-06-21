@@ -1,16 +1,26 @@
 // Bookings.js
-import React, { useState } from 'react';
+import React, { useReducer } from 'react';
 import BookingForm from './BookingForm';
 
+// Reducer function to update available times
+function updateTimes(state, action) {
+    // For now, return the same available times regardless of the date
+    // In a real application, you would fetch or calculate the available times based on the date
+    return action.date ? ['10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00'] : [];
+}
+
+// Initial state for the available times
+function initializeTimes() {
+    return ['10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00'];
+}
+
 function Bookings() {
-    const [availableTimes, setAvailableTimes] = useState(['17:00', '18:00', '19:00', '20:00', '21:00', '22:00']);
+    const [availableTimes, setAvailableTimes] = useReducer(updateTimes, [], initializeTimes);
 
     return (
-        <div className="booking-container">
-            <BookingForm 
-                availableTimes={availableTimes} 
-                setAvailableTimes={setAvailableTimes} 
-            />
+        <div>
+            <h1>Bookings</h1>
+            <BookingForm dispatch={setAvailableTimes} availableTimes={availableTimes} />
         </div>
     );
 }
