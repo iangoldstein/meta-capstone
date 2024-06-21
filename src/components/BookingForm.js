@@ -9,7 +9,7 @@ function BookingForm({ availableTimes, setAvailableTimes }) {
     const handleSubmit = (event) => {
         event.preventDefault();
         const formData = { date, time, guests, occasion };
-        console.log(formData);
+        console.log("Submitting Form Data" + formData);
         // Handle form submission here
     };
 
