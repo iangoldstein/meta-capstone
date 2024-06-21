@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Main from './components/main';
 import About from './components/about';
 import Menu from './components/menu';
-import Reservations from './components/reservations';
+import Bookings from './components/bookings';
 import OrderOnline from './components/order';
 import Login from './components/login';
 
@@ -23,7 +23,7 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/about" element={<About />} />
           <Route path="/menu" element={<Menu />} />
-          <Route path="/reservations" element={<Reservations />} />
+          <Route path="/bookings" element={<Bookings />} />
           <Route path="/order-online" element={<OrderOnline />} />
           <Route path="/login" element={<Login />} />
         </Routes>
