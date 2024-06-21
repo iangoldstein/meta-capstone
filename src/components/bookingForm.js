@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 
-function BookingForm() {
+function BookingForm({ availableTimes, setAvailableTimes }) {
     const [date, setDate] = useState('');
     const [time, setTime] = useState('');
     const [guests, setGuests] = useState(1);
     const [occasion, setOccasion] = useState('');
-    const [availableTimes, setAvailableTimes] = useState(['17:00', '18:00', '19:00', '20:00', '21:00', '22:00']);
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        const formData = { date, time, guests, occasion };
+        console.log(formData);
         // Handle form submission here
     };
 
@@ -20,9 +21,9 @@ function BookingForm() {
                 <input type="date" id="res-date" value={date} onChange={e => setDate(e.target.value)} />
 
                 <label htmlFor="res-time">Choose time</label>
-                <select id="res-time" value={time} onChange={e => setTime(e.target.value)}>
-                    {availableTimes.map((time, index) => (
-                        <option key={index}>{time}</option>
+                <select value={time} onChange={e => setTime(e.target.value)}>
+                    {availableTimes && availableTimes.map(time => (
+                        <option key={time} value={time}>{time}</option>
                     ))}
                 </select>
 
