@@ -1,17 +1,17 @@
 import React from 'react';
 
 import './App.css';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Nav from './components/Nav';
+import Footer from './components/1Footer';
+import Header from './components/1Header';
+import Nav from './components/1Nav';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Main from './components/Main';
-import About from './components/About';
-import Menu from './components/Menu';
-import Bookings from './components/Bookings';
-import OrderOnline from './components/Order';
-import Login from './components/Login';
+import Main from './components/1Main';
+import About from './components/1About';
+import Menu from './components/1Menu';
+import Bookings from './components/1Bookings';
+import OrderOnline from './components/1Order';
+import Login from './components/1Login';
 
 
 function App() {
