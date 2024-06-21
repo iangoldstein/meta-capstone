@@ -249,3 +249,9 @@ form input[type="submit"]:hover {
   background-color: rgb(28, 57, 28);
 
 }
+
+/* Form Animation */
+@keyframes progress {
+    from { width: 0; }
+    to { width: 100%; }
+}
