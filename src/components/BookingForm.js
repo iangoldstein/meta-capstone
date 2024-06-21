@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+// BookingForm.js
+import React, { useState, useEffect } from 'react';
 
-function BookingForm({ availableTimes, setAvailableTimes }) {
+function BookingForm({ availableTimes, setAvailableTimes, onDateChange }) {
     const [date, setDate] = useState('');
     const [time, setTime] = useState('');
     const [guests, setGuests] = useState(1);
     const [occasion, setOccasion] = useState('');
+
+    const handleDateChange = (e) => {
+        const newDate = e.target.value;
+        setDate(newDate);
+        if (onDateChange) {
+            onDateChange(newDate);
+        }
+    };
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -18,7 +27,7 @@ function BookingForm({ availableTimes, setAvailableTimes }) {
             <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }} onSubmit={handleSubmit}>
                 <h2>Book Now</h2>
                 <label htmlFor="res-date">Choose date</label>
-                <input type="date" id="res-date" value={date} onChange={e => setDate(e.target.value)} aria-label="Choose date" />
+                <input type="date" id="res-date" value={date} onChange={handleDateChange} aria-label="Choose date" />
 
                 <label htmlFor="res-time">Choose time</label>
                 <select value={time} onChange={e => setTime(e.target.value)} aria-label="Choose time">
@@ -32,8 +41,9 @@ function BookingForm({ availableTimes, setAvailableTimes }) {
 
                 <label htmlFor="occasion">Occasion</label>
                 <select id="occasion" value={occasion} onChange={e => setOccasion(e.target.value)} aria-label="Occasion">
-                    <option>Birthday</option>
-                    <option>Anniversary</option>
+                    <option value="">Select Occasion</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Anniversary">Anniversary</option>
                 </select>
 
                 <input type="submit" value="Make Your reservation" aria-label="Make Your reservation" />

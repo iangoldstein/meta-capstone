@@ -9,13 +9,13 @@ const seededRandom = function (seed) {
 
 const fetchAPI = function(date) {
     let result = [];
-    let random = seededRandom(date.getDate());
+    //let random = seededRandom(date.getDate());  //prior implementation
 
     for(let i = 17; i <= 23; i++) {
-        if(random() < 0.5) {
+        if(Math.random() < 0.5) {
             result.push(i + ':00');
         }
-        if(random() < 0.5) {
+        if(Math.random() < 0.5) {
             result.push(i + ':30');
         }
     }
