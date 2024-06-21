@@ -1,12 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
-import { initializeTimes, updateTimes } from './Bookings';
-
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+import { initializeTimes, updateTimes } from './components/Bookings';
+import BookingForm from './components/BookingForm'; // Add this line
 
 test('Renders the BookingForm heading', () => {
     render(<BookingForm />);
