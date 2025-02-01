@@ -1,6 +1,6 @@
 // Bookings.js
 import React, { useState, useEffect, useReducer } from 'react';
-import BookingForm from './BookingForm';
+import BookingForm from './BookingForm.js';
 import { fetchAPI, submitAPI } from '../js/api.js';
 
 
