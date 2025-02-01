@@ -28,7 +28,7 @@ const Modal = ({ show, onClose }) => {
                 alignItems: 'center',
                 justifyContent: 'center'
             }}>
-                <h2>Your Reservation is Processing</h2>
+                <h2>Your Reservation has been booked!</h2>
                 <div style={{
                     width: '100%',
                     backgroundColor: '#e0e0e0',

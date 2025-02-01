@@ -1,6 +1,7 @@
 // Updated BookingForm.js with form validation
 import React, { useState, useEffect } from 'react';
 import Modal from './Modal'; // Adjust the path as necessary
+import { useNavigate } from 'react-router-dom'; // Import navigation
 
 function BookingForm({ availableTimes, setAvailableTimes, onDateChange }) {
     const [date, setDate] = useState('');
@@ -13,6 +14,7 @@ function BookingForm({ availableTimes, setAvailableTimes, onDateChange }) {
     const [guestsError, setGuestsError] = useState('');
 
     const [showModal, setShowModal] = useState(false);
+    const navigate = useNavigate(); // Initialize navigate
 
     const handleDateChange = (e) => {
         const newDate = e.target.value;
@@ -58,7 +60,7 @@ function BookingForm({ availableTimes, setAvailableTimes, onDateChange }) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        
+
         // Validate form before submission
         if (!validateForm()) {
             return; // Stop form submission if validation fails
@@ -71,7 +73,7 @@ function BookingForm({ availableTimes, setAvailableTimes, onDateChange }) {
         // Simulate booking process
         setTimeout(() => {
             setShowModal(false); // Hide modal after 2 seconds
-            // Here, you can also reset form state or perform other actions
+            navigate('/');
         }, 2000);
     };
 

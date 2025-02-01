@@ -53,7 +53,12 @@ function Bookings() {
     return (
         <div>
             <h1>Bookings</h1>
-            <BookingForm onDateChange={setSelectedDate} dispatch={setAvailableTimes} availableTimes={availableTimes} />
+            <BookingForm
+                onDateChange={setSelectedDate}
+                dispatch={setAvailableTimes}
+                availableTimes={availableTimes}
+                onSubmit={bookTable} // Pass bookTable to BookingForm
+            />
         </div>
     );
 }
